@@ -1,0 +1,402 @@
+local tmr = game.Players.localPlayer.PlayerGUI.RoundTimer
+
+local min = tmr.MinValue.value
+local sec = tmr.SecValue.value
+
+
+local Map1Spawn = game.Workspace.Spawns.Map1
+local Map2Spawn = game.Workspace.Spawns.Map2
+local Map3Spawn = game.Workspace.Spawns.Map3
+local Map4Spawn = game.Workspace.Spawns.Map4
+local Map5Spawn = game.Workspace.Spawns.Map5
+local Map6Spawn = game.Workspace.Spawns.Map6
+
+local Map1Spawn2 = game.Workspace.Spawns.2Map1
+local Map2Spawn2 = game.Workspace.Spawns.2Map2
+local Map3Spawn2 = game.Workspace.Spawns.2Map3
+local Map4Spawn2 = game.Workspace.Spawns.2Map4
+local Map5Spawn2 = game.Workspace.Spawns.2Map5
+local Map6Spawn2 = game.Workspace.Spawns.2Map6
+
+local listValueLow = [ 
+          game.ServerStorage.Values.plrCount.value - game.ServerStorage.Values.plrCount.value-1  
+]
+
+local listValueHigh = [ 
+          game.ServerStorage.Values.plrCount.value   
+]
+
+while true do
+     if game.ServerStorage.Values.roundPlaying.value == true then
+     
+          local Guns = game.ServerStorage.Weapons.PrimaryGuns
+          local Guns2 = game.ServerStorage.Weapons.SecondaryGuns
+          
+          local ranGun = math.Random(Guns.M4Carbine, Guns.AK47, Guns.P90, Guns.SSG08, Guns.AWP, Guns.AUG, Guns.SG553, Guns.SawedOff, Guns.Nova, Guns.Mag7, Guns.PPBison, Guns.Mac7, Guns.Mac10)
+          
+          local ranGun2 = math.Random(Guns2.P250, Guns2.TEC9, Guns2.Deagle, Guns2.R8Revolver, Guns2.Glock19, Guns2.USPs, Guns2.P2000, Guns2.DuelBerrettas)
+     
+          local ranMap = Math.Random("1", "2", "3", "4", "5", "6")
+          local ranPlr = Math.Random(listValueLow, listValueHigh)
+          
+          ranGun.Parent = game.Players.localPlayer.PlayerBackpack 
+          ranGun2.Parent = game.Players.localPlayer.PlayerBackpack
+          
+          game.ServerStorage.Weapons.Knife.Parent = game.Players.localPlayer.PlayerBackpack
+          
+          if ranMap == "1" then
+          
+             if game.Lighting.CurrentMap.value == 1 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 2 then
+                  game.Workspace.Forest.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 3 then
+                  game.Workspace.LakeHouse.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 4 then
+                  game.Workspace.Office.Parent = game.Lighting
+             end
+
+             if game.Lighting.Allyway.value == 5 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 6 then
+                  game.Workspace.Streetfight.Parent = game.Lighting
+             end
+             
+             
+             wait(1)
+             
+             game.Workspace:GetChildren("Model").Humanoid.Health = 0
+             
+             wait(5)
+             
+             
+             game.Lighting.2008House.Parent = game.Workspace
+             game.Lighting.CurrentMap.value = 1 
+             
+             
+             
+               if ranPlr == listValueLow then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map1Spawn
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map1Spawn2
+               end
+               
+               if ranPlr == listValueHigh then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map1Spawn2
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map1Spawn
+               end
+          end
+          
+          if ranMap == "2" then
+                    
+             if game.Lighting.CurrentMap.value == 1 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 2 then
+                  game.Workspace.Forest.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 3 then
+                  game.Workspace.LakeHouse.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 4 then
+                  game.Workspace.Office.Parent = game.Lighting
+             end
+
+             if game.Lighting.Allyway.value == 5 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 6 then
+                  game.Workspace.Streetfight.Parent = game.Lighting
+             end
+             
+                          
+             wait(1)
+             
+             game.Workspace:GetChildren("Model").Humanoid.Health = 0
+             
+             wait(5)
+             
+             
+             game.Lighting.Forest.Parent = game.Workspace
+             game.Lighting.CurrentMap.value = 2
+             
+               if ranPlr == listValueLow then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map2Spawn
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map2Spawn2
+               end
+               
+               if ranPlr == listValueHigh then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map2Spawn2
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map2Spawn
+               end
+          end
+          
+          if ranMap == "3" then
+                    
+             if game.Lighting.CurrentMap.value == 1 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 2 then
+                  game.Workspace.Forest.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 3 then
+                  game.Workspace.LakeHouse.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 4 then
+                  game.Workspace.Office.Parent = game.Lighting
+             end
+
+             if game.Lighting.Allyway.value == 5 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 6 then
+                  game.Workspace.Streetfight.Parent = game.Lighting
+             end
+             
+             wait(1)
+             
+             game.Workspace:GetChildren("Model").Humanoid.Health = 0
+             
+             wait(5)
+             
+             game.Lighting.LakeHouse.Parent = game.Workspace
+             game.Lighting.CurrentMap.value = 3
+             
+               if ranPlr == listValueLow then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map3Spawn
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map3Spawn2
+               end
+               
+               if ranPlr == listValueHigh then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map3Spawn2
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map3Spawn
+               end
+          end
+          
+          if ranMap == "4" then
+                    
+             if game.Lighting.CurrentMap.value == 1 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 2 then
+                  game.Workspace.Forest.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 3 then
+                  game.Workspace.LakeHouse.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 4 then
+                  game.Workspace.Office.Parent = game.Lighting
+             end
+
+             if game.Lighting.Allyway.value == 5 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 6 then
+                  game.Workspace.Streetfight.Parent = game.Lighting
+             end
+             
+                          
+             wait(1)
+             
+             game.Workspace:GetChildren("Model").Humanoid.Health = 0
+             
+             wait(5)
+             
+             
+             game.Lighting.Office.Parent = game.Workspace
+             game.Lighting.CurrentMap.value = 4
+             
+               if ranPlr == listValueLow then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map4Spawn
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map4Spawn2
+               end
+               
+               if ranPlr == listValueHigh then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map4Spawn2
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map4Spawn
+               end
+          end
+          
+          if ranMap == "5" then
+                    
+             if game.Lighting.CurrentMap.value == 1 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 2 then
+                  game.Workspace.Forest.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 3 then
+                  game.Workspace.LakeHouse.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 4 then
+                  game.Workspace.Office.Parent = game.Lighting
+             end
+
+             if game.Lighting.Allyway.value == 5 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 6 then
+                  game.Workspace.Streetfight.Parent = game.Lighting
+             end
+                          
+             wait(1)
+             
+             game.Workspace:GetChildren("Model").Humanoid.Health = 0
+             
+             wait(5)
+             
+             
+             game.Lighting.Allyway.Parent = game.Workspace
+             game.Lighting.CurrentMap.value = 5
+             
+               if ranPlr == listValueLow then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map5Spawn
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map5Spawn2
+               end
+               
+               if ranPlr == listValueHigh then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map5Spawn2
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map5Spawn
+               end
+          end
+          
+          if ranMap == "6" then
+                       
+             if game.Lighting.CurrentMap.value == 1 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 2 then
+                  game.Workspace.Forest.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 3 then
+                  game.Workspace.LakeHouse.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 4 then
+                  game.Workspace.Office.Parent = game.Lighting
+             end
+
+             if game.Lighting.Allyway.value == 5 then
+                  game.Workspace.2008House.Parent = game.Lighting
+             end
+
+             if game.Lighting.CurrentMap.value == 6 then
+                  game.Workspace.Streetfight.Parent = game.Lighting
+             end
+             
+                          
+             wait(1)
+             
+             game.Workspace:GetChildren("Model").Humanoid.Health = 0
+             
+             wait(5)
+             
+             
+             game.Lighting.Streetfight.Parent = game.Workspace
+             game.Lighting.CurrentMap.value = 6
+             
+             
+               if ranPlr == listValueLow then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map5Spawn
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map5Spawn2
+               end
+               
+               if ranPlr == listValueHigh then
+                    game.Workspace:FindFirstChild(Player).Torso.Position = Map5Spawn2
+                    game.Workspace:FindLastChild(Player).Torso.Position = Map5Spawn
+               end
+          end
+          
+          game.Players:GetChildren(Children.PlayerGUI.RoundTimer).Enabled = true 
+          
+          if tmr.Enabled == true then
+               tmr.Display.Time = (min ":" sec)
+               
+               tmr.MinValue = 0
+               tmr.SecValue = 10
+               wait(1)
+               tmr.SecValue = SecValue-1
+               
+               if tmr.SecValue == 0 then 
+                    tmr.MinValue = 2
+                    tmr.SecValue = 30
+                    
+                    while true do
+                         wait(01)
+                         tmr.SecValue = tmr.SecValue-1
+                    end
+                    
+                    if tmr.SecValue == 0 then
+                         wait(1)
+                         tmr.MinValue = tmr.MinValue-1
+                         tmr.SecValue = 59
+                    end
+                    
+                    
+                    if tmr.MinValue = 0
+                         game.Workspace:GetChildren("Model").Humanoid.Health = 0
+                         game.Players.localPlayer.PlayerGUI.roundEnd.Enabled = true
+                         wait(0)
+                         game.ServerStorage.Values.roundPlaying.value == false
+                         wait(5)
+                         game.ServerStorage.Values.roundPlaying.value == true
+                         
+                    end
+               end
+          end
+     end 
+end
+
+local DeathUIs = game.ServerStorage.DeathScreenUIs
+
+while true do
+     if game.Workspace:GetChildren("Model").Humanoid.Health == 1 then
+          wait(game.Workspace:GetChildren("Model").Humanoid.Health == 0)
+     
+          local ranScreen = math.Random(DeathUIs.Death1, DeathUIs.Death2, DeathUIs.Death3, DeathUIs.4, DeathUIs.5)
+          ranScreen.Parent = game.Players.localPlayer.PlayerGUI
+          ranScreen.Enabled = true 
+          wait(5)
+          ranScreen.Parent = game.ServerStorage.DeathScreenUIs
+     end
+end
+
+
+local HealthUI = game.ServerStorage.HealthUI.HealthUI
+
+while true do 
+     if game.Players.localPlayer.humanoid.Health = <100 then
+
+          HealthUI.Parent = game.Workspace.localPlayer.Head
+          
+          HealthUI.Enabled = true
+     
+          HealthUI.HealthBarBackground.HealthBar.size.x = game.Players.localPlayer.humanoid.Health x 2
+          wait(2)
+          HealthUI.Enabled = false
+     end
