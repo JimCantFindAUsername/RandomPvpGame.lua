@@ -1,0 +1,15 @@
+while true do
+     if game.ServerStorage.Values.plrCount.value == <2 then
+          game.ServerStoage.Values.roundPlaying.value.Enabled = false
+          game.Players.localPlayer.PlayerGUI.waitingForPlayers.value = true
+     end
+end
+
+
+while true do
+     if game.ServerStorage.Values.plrCount.value == >2 then
+          game.ServerStoage.Values.roundPlaying.value = true
+          game.Players.localPlayer.PlayerGUI.waitingForPlayers.value = false
+     end
+end
+
