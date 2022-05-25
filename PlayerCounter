@@ -1,0 +1,10 @@
+function join()
+     game.ServerStorage.Values.plrCount.value = game.ServerStorage.Values.plrCount.value +1
+end
+
+function Leave()
+     game.ServerStorage.Values.plrCount.value = game.ServerStorage.Values.plrCount.value -1
+end
+
+game.Players.childRemoved:Connect(Leave)
+game.Players.childAdded:Connect(join)
